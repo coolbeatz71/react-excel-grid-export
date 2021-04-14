@@ -1,25 +1,26 @@
 {
-  "name": "react-data-export",
+  "name": "react-excel-grid-export",
   "version": "0.6.0",
   "main": "dist/index.js",
   "types": "types/index.d.ts",
   "description": "A set of tools to export dataset from react to different formats.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/securedeveloper/react-data-export.git"
+    "url": "git+https://github.com/coolbeatz71/react-excel-grid-export.git"
   },
   "keywords": [
+    "react-excel-grid-export",
     "react-data-export",
     "react-dataset",
     "react-export",
     "react-excel-export"
   ],
-  "author": "Afzal Ahmad <securedeveloper@gmail.com>",
+  "author": "Mutombo Jean-vincent <coolbeatz71@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/securedeveloper/react-data-export/issues"
+    "url": "https://github.com/coolbeatz71/react-excel-grid-export/issues"
   },
-  "homepage": "https://github.com/securedeveloper/react-data-export#readme",
+  "homepage": "https://github.com/coolbeatz71/react-excel-grid-export#readme",
   "dependencies": {
     "file-saver": "1.3.3",
     "tempa-xlsx": "0.0.1"
