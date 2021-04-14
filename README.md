@@ -1,12 +1,5 @@
 # React-Excel-Grid-Export
 
-[![npm version](https://badge.fury.io/js/react-excel-grid-export.svg)](https://badge.fury.io/js/react-excel-grid-export)
-[![dependencies Status](https://david-dm.org/securedeveloper/react-excel-grid-export/status.svg)](https://david-dm.org/securedeveloper/react-excel-grid-export)
-[![devDependencies Status](https://david-dm.org/securedeveloper/react-excel-grid-export/dev-status.svg)](https://david-dm.org/securedeveloper/react-excel-grid-export?type=dev)
-[![Build Status](https://travis-ci.org/securedeveloper/react-excel-grid-export.svg?branch=master)](https://travis-ci.org/securedeveloper/react-excel-grid-export)
-[![Vulnerabilities](https://snyk.io/test/github/securedeveloper/react-excel-grid-export/badge.svg)](https://snyk.io/test/github/securedeveloper/react-excel-grid-export)
-[![Coverage Status](https://coveralls.io/repos/github/securedeveloper/react-excel-grid-export/badge.svg?branch=master)](https://coveralls.io/github/securedeveloper/react-excel-grid-export?branch=master)
-
 A data export library built with and for [React](http://facebook.github.io/react/index.html).
 
 ## Installation
