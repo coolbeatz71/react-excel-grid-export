@@ -1,5 +1,8 @@
 # React-Excel-Grid-Export
 
+[![Build Status](https://travis-ci.com/coolbeatz71/react-excel-grid-export.svg?branch=master)](https://travis-ci.com/coolbeatz71/react-excel-grid-export.svg?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/coolbeatz71/react-excel-grid-export/badge.svg?branch=master)](https://coveralls.io/github/coolbeatz71/react-excel-grid-export?branch=master)
+
 A data export library built with and for [React](http://facebook.github.io/react/index.html).
 
 ## Installation
