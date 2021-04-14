@@ -1,4 +1,4 @@
-# Contributing to react-data-export
+# Contributing to react-excel-grid-export
 
 We are happy you wish to contribute this project, for that reason we want to board you with this guide.
 
@@ -8,15 +8,15 @@ We are happy you wish to contribute this project, for that reason we want to boa
 
 Steps that contributor should follow in order to create a pull request
 
-[Fork](https://help.github.com/articles/fork-a-repo/) the [repository](https://github.com/securedeveloper/react-data-export) by clicking the 'Fork' icon in the top-right corner of GitHub
+[Fork](https://help.github.com/articles/fork-a-repo/) the [repository](https://github.com/coolbeatz71/react-excel-grid-export) by clicking the 'Fork' icon in the top-right corner of GitHub
 
 Clone the repository in the command line on your PC:
 
-`$ git clone https://github.com/securedeveloper/react-data-export`
+`$ git clone https://github.com/coolbeatz71/react-excel-grid-export`
 
 Navigate to the cloned repository in the OS' file manager GUI or on the command line, e.g.
 
-`$ cd react-data-export`
+`$ cd react-excel-grid-export`
 
 Create a new branch to make a change on
 

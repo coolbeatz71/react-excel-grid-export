@@ -1,78 +1,78 @@
 /* index.d.ts (C) react-data-export */
 
 // TypeScript Version: 2.2
-declare module 'react-data-export' {
-  import * as React from 'react'
+declare module "react-data-export" {
+  import * as React from "react";
 
-  export interface ExcelFileProps {
+  export interface GridFileProps {
     filename?: string;
     fileExtension?: string;
     element?: any; //Download Element
-    children?: Array<React.ReactChild> | React.ReactChild; // Array<ExcelSheetProps>;
+    children?: Array<React.ReactChild> | React.ReactChild; // Array<GridSheetProps>;
   }
 
-  export interface ExcelSheetProps {
+  export interface GridSheetProps {
     name: string;
     data?: Array<object>;
-    dataSet?: Array<ExcelSheetData>;
+    dataSet?: Array<GridSheetData>;
     value?: Array<string> | Function;
-    children?: Array<React.ReactChild> | React.ReactChild; // Array<ExcelColumnProps>
+    children?: Array<React.ReactChild> | React.ReactChild; // Array<GridColumnProps>
   }
 
-  export interface ExcelSheetData {
+  export interface GridSheetData {
     xSteps?: number;
     ySteps?: number;
     columns: Array<string>;
-    data: Array<ExcelCellData>;
+    data: Array<GridCellData>;
   }
 
-  export type ExcelCellData = ExcelValue | ExcelCell | Array<ExcelValue>;
-  export type ExcelValue = string | number | Date | boolean;
+  export type GridCellData = GridValue | GridCell | Array<GridValue>;
+  export type GridValue = string | number | Date | boolean;
 
-  export interface ExcelCell {
-    value: ExcelCell;
-    style: ExcelStyle;
+  export interface GridCell {
+    value: GridCell;
+    style: GridStyle;
   }
 
-  export interface ExcelColumnProps {
+  export interface GridColumnProps {
     label: string;
     value: number | boolean | string | Function;
   }
 
-  export interface ExcelStyle {
-    fill?: ExcelCellFillType;
-    font?: ExcelFont;
-    numFmt?: ExcelNumFormat;
-    alignment?: ExcelAlignment;
-    border?: ExcelBorder;
+  export interface GridStyle {
+    fill?: GridCellFillType;
+    font?: GridFont;
+    numFmt?: GridNumFormat;
+    alignment?: GridAlignment;
+    border?: GridBorder;
   }
 
-  /* ExcelCell Fill Type */
-  export type ExcelCellPatternType = "solid" | "none";
+  /* GridCell Fill Type */
+  export type GridCellPatternType = "solid" | "none";
 
-  export interface ExcelColorSpec {
+  export interface GridColorSpec {
     auto?: number; //default 1
     rgb?: string; //hex ARGB color
-    theme?: ExcelTheme;
+    theme?: GridTheme;
     indexed?: number;
   }
 
-  export interface ExcelTheme {
+  export interface GridTheme {
     theme: string;
     tint: string;
   }
 
-  export interface ExcelCellFillType {
-    patternType?: ExcelCellPatternType;
-    fgColor?: ExcelColorSpec;
-    bgColor?: ExcelColorSpec;
+  export interface GridCellFillType {
+    patternType?: GridCellPatternType;
+    fgColor?: GridColorSpec;
+    bgColor?: GridColorSpec;
   }
 
-  /* Excel Font */
-  export interface ExcelFont {
-    name?: string;          // default `"Calibri"`
-    sz?: number;             //font size in points default 11
-    color?: ExcelColorSpec;
+  /* Grid Font */
+  export interface GridFont {
+    name?: string; // default `"Calibri"`
+    sz?: number; //font size in points default 11
+    color?: GridColorSpec;
     bold?: boolean;
     underline?: boolean;
     italic?: boolean;
@@ -82,32 +82,41 @@ declare module 'react-data-export' {
     vertAlign?: boolean;
   }
 
-  /* ExcelNumFormat */
-  export type ExcelNumFormat = "0" | "0.00%" | "0.0%" | "0.00%;\\(0.00%\\);\\-;@" | "m/dd/yy" | string;
+  /* GridNumFormat */
+  export type GridNumFormat =
+    | "0"
+    | "0.00%"
+    | "0.0%"
+    | "0.00%;\\(0.00%\\);\\-;@"
+    | "m/dd/yy"
+    | string;
 
-  /* ExcelAlignment */
-  export interface ExcelAlignment {
-    vertical?: ExcelAlignmentType;
-    horizontal?: ExcelAlignmentType;
+  /* GridAlignment */
+  export interface GridAlignment {
+    vertical?: GridAlignmentType;
+    horizontal?: GridAlignmentType;
     wrapText?: boolean;
-    readingOrder?: ExcelReadingOrder;
-    textRotation?: ExcelTextRotation;
+    readingOrder?: GridReadingOrder;
+    textRotation?: GridTextRotation;
   }
 
-  export type ExcelTextRotation = 0 | 45 | 90 | 135 | 180 | 255;
+  export type GridTextRotation = 0 | 45 | 90 | 135 | 180 | 255;
 
-  export enum ExcelReadingOrder { LeftToRight = 1, RightToLeft}
-
-  export type ExcelAlignmentType = "bottom" | "center" | "top";
-
-  /* ExcelBorder */
-  export interface ExcelBorder {
-    style: ExcelBorderStyle;
-    color: ExcelColorSpec;
+  export enum GridReadingOrder {
+    LeftToRight = 1,
+    RightToLeft,
   }
 
-  export type ExcelBorderStyle =
-    "thin"
+  export type GridAlignmentType = "bottom" | "center" | "top";
+
+  /* GridBorder */
+  export interface GridBorder {
+    style: GridBorderStyle;
+    color: GridColorSpec;
+  }
+
+  export type GridBorderStyle =
+    | "thin"
     | "medium"
     | "thick"
     | "dotted"
@@ -120,18 +129,14 @@ declare module 'react-data-export' {
     | "mediumDashDotDot"
     | "slantDashDot";
 
-  export class ExcelColumn extends React.Component<ExcelColumnProps, any> {
-  }
+  export class GridColumn extends React.Component<GridColumnProps, any> {}
 
-  export class ExcelSheet extends React.Component<ExcelSheetProps, any> {
-  }
+  export class GridSheet extends React.Component<GridSheetProps, any> {}
 
-  export class ExcelFile extends React.Component<ExcelFileProps, any> {
-  }
+  export class GridFile extends React.Component<GridFileProps, any> {}
 
   export namespace ReactExport {
-    export class ExcelFile extends React.Component<ExcelFileProps, any> {
-    }
+    export class GridFile extends React.Component<GridFileProps, any> {}
   }
-  export default ReactExport
+  export default ReactExport;
 }

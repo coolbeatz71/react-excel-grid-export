@@ -3,14 +3,14 @@ import PropTypes from "prop-types";
 import { saveAs } from "file-saver";
 import XLSX from "tempa-xlsx";
 
-import ExcelSheet from "../elements/ExcelSheet";
+import GridSheet from "../elements/GridSheet";
 import {
   strToArrBuffer,
   excelSheetFromAoA,
   excelSheetFromDataSet,
 } from "../utils/DataUtil";
 
-class ExcelFile extends React.Component {
+class GridFile extends React.Component {
   fileExtensions = ["xlsx", "xls", "csv", "txt", "html"];
   defaultFileExtension = "xlsx";
 
@@ -21,10 +21,8 @@ class ExcelFile extends React.Component {
     element: PropTypes.any,
     children: function (props, propName, componentName) {
       React.Children.forEach(props[propName], (child) => {
-        if (child.type !== ExcelSheet) {
-          throw new Error(
-            "<ExcelFile> can only have <ExcelSheet> as children. ",
-          );
+        if (child.type !== GridSheet) {
+          throw new Error("<GridFile> can only have <GridSheet> as children. ");
         }
       });
     },
@@ -40,11 +38,8 @@ class ExcelFile extends React.Component {
   constructor(props) {
     super(props);
 
-    if (this.props.hideElement) {
-      this.download();
-    } else {
-      this.handleDownload = this.download.bind(this);
-    }
+    if (this.props.hideElement) this.download();
+    else this.handleDownload = this.download.bind(this);
 
     this.createSheetData = this.createSheetData.bind(this);
   }
@@ -145,10 +140,7 @@ class ExcelFile extends React.Component {
       extension = slugs[slugs.length - 1];
     }
 
-    if (this.fileExtensions.indexOf(extension) !== -1) {
-      return extension;
-    }
-
+    if (this.fileExtensions.indexOf(extension) !== -1) return extension;
     return this.defaultFileExtension;
   }
 
@@ -167,4 +159,4 @@ class ExcelFile extends React.Component {
   }
 }
 
-export default ExcelFile;
+export default GridFile;

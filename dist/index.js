@@ -1,34 +1,36 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true,
 });
 
-var _ExcelFile = require("./ExcelPlugin/components/ExcelFile");
+var _GridFile = require("./GridPlugin/components/GridFile");
 
-var _ExcelFile2 = _interopRequireDefault(_ExcelFile);
+var _GridFile2 = _interopRequireDefault(_GridFile);
 
-var _ExcelSheet = require("./ExcelPlugin/elements/ExcelSheet");
+var _GridSheet = require("./GridPlugin/elements/GridSheet");
 
-var _ExcelSheet2 = _interopRequireDefault(_ExcelSheet);
+var _GridSheet2 = _interopRequireDefault(_GridSheet);
 
-var _ExcelColumn = require("./ExcelPlugin/elements/ExcelColumn");
+var _GridColumn = require("./GridPlugin/elements/GridColumn");
 
-var _ExcelColumn2 = _interopRequireDefault(_ExcelColumn);
+var _GridColumn2 = _interopRequireDefault(_GridColumn);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
 
-_ExcelFile2.default.ExcelSheet = _ExcelSheet2.default;
-_ExcelFile2.default.ExcelColumn = _ExcelColumn2.default;
+_GridFile2.default.GridSheet = _GridSheet2.default;
+_GridFile2.default.GridColumn = _GridColumn2.default;
 
 var ReactExport = {
-    ExcelFile: _ExcelFile2.default
+  GridFile: _GridFile2.default,
 };
 
 exports.default = ReactExport;
 
 exports.modules = {
-    ExcelFile: _ExcelFile2.default,
-    ExcelSheet: _ExcelSheet2.default,
-    ExcelColumn: _ExcelColumn2.default
+  GridFile: _GridFile2.default,
+  GridSheet: _GridSheet2.default,
+  GridColumn: _GridColumn2.default,
 };

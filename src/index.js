@@ -1,17 +1,19 @@
-import ExcelFile from "./ExcelPlugin/components/ExcelFile";
-import ExcelSheet from "./ExcelPlugin/elements/ExcelSheet";
-import ExcelColumn from "./ExcelPlugin/elements/ExcelColumn";
+import GridFile from "./GridPlugin/components/GridFile";
+import GridSheet from "./GridPlugin/elements/GridSheet";
+import GridColumn from "./GridPlugin/elements/GridColumn";
 
-ExcelFile.ExcelSheet = ExcelSheet;
-ExcelFile.ExcelColumn = ExcelColumn;
+GridFile.GridSheet = GridSheet;
+GridFile.GridColumn = GridColumn;
 
 const ReactExport = {
-    ExcelFile
+  GridFile,
+  GridSheet,
+  GridColumn,
 };
 
 export default ReactExport;
 exports.modules = {
-    ExcelFile,
-    ExcelSheet,
-    ExcelColumn
+  GridFile,
+  GridSheet,
+  GridColumn,
 };
